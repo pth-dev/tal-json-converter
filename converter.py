@@ -20,6 +20,26 @@ HEADER_DETAIL_COLS = [
 
 LINE_COLS = ["Product", "LineRefNo", "UnitRetailPrice", "Tier", "Quantity"]
 
+# Canonical order for OrderLineDetail fields.
+# LInseam short / RInseam short occupy the same position as LInseam / RInseam.
+LINE_DETAIL_ORDER = [
+    "Style", "MainFabric", "StanttFabric", "FabricName", "PocketingFabric",
+    "FrontStyle", "FrontCrease", "Hem", "FrenchFly", "WaistbandExtension",
+    "WaistbandGripper", "Button", "Washing", "Dipping", "Monogram",
+    "MonogramInitial", "MonogramLocation", "MonogramFont", "MonogramColor",
+    "Size", "Fit", "Hip", "Waist",
+    "LInseam", "RInseam",           # regular trousers
+    "LInseam short", "RInseam short",  # shorts — same position slot
+    "IncrRise", "DecrRise", "Thigh", "Knee", "Ankle",
+    "FrontPocket", "FrontPocketReinforcement", "BackPocket", "BackPocketLabel",
+    "Label", "EDI_PO", "HangTag1", "HangTag2", "Rush",
+    "StandardLabel1", "StandardLabel2", "StandardLabel3",
+    # JokerTag injected here when StandardLabel3 has value
+    "StandardLabel4", "PackingSlipSize", "Zipper", "Rivet",
+    # UPC/ColorCode/ColorName/StyleName/StoreStyle injected here when StandardLabel3 has value
+    "NewAlteration",
+]
+
 
 def _pivot_detail(detail_list):
     """Convert [{ref, val}] list to a flat dict."""
@@ -116,38 +136,39 @@ def excel_to_json(excel_bytes: bytes) -> bytes:
         for _, row in group.iterrows():
             line_fields = {col: row[col] for col in LINE_COLS if col in df.columns}
 
-            # Determine whether this line is short or regular based on which
-            # inseam fields have values. Mutually exclusive: if LInseam has a
-            # non-empty value use the regular pair; otherwise use the short pair.
-            has_regular_inseam = bool(row.get("LInseam", "").strip()) if "LInseam" in df.columns else False
-            has_short_inseam   = bool(row.get("LInseam short", "").strip()) if "LInseam short" in df.columns else False
+            # Determine inseam type: regular (LInseam) or short (LInseam short)
+            has_regular_inseam = bool(str(row.get("LInseam", "")).strip()) if "LInseam" in df.columns else False
+            has_short_inseam   = bool(str(row.get("LInseam short", "")).strip()) if "LInseam short" in df.columns else False
 
-            INSEAM_REGULAR = {"LInseam", "RInseam"}
-            INSEAM_SHORT   = {"LInseam short", "RInseam short"}
+            std_label3_val = str(row.get("StandardLabel3", "")).strip() if "StandardLabel3" in df.columns else ""
 
-            # Fields injected only when StandardLabel3 has a value
-            RETAIL_FIELDS = ["JokerTag", "UPC", "ColorCode", "ColorName", "StyleName", "StoreStyle"]
+            # Build a lookup of all available values for this row
+            row_vals = {col: row[col] for col in df.columns}
 
             line_detail = []
-            std_label3_val = row.get("StandardLabel3", "") if "StandardLabel3" in df.columns else ""
-
-            for col in line_detail_cols:
-                # Skip the inseam key that doesn't apply to this line
-                if col in INSEAM_REGULAR and not has_regular_inseam:
+            for col in LINE_DETAIL_ORDER:
+                # Skip inseam pair that doesn't apply
+                if col in ("LInseam", "RInseam") and not has_regular_inseam:
                     continue
-                if col in INSEAM_SHORT and not has_short_inseam:
+                if col in ("LInseam short", "RInseam short") and not has_short_inseam:
                     continue
-                # Skip retail fields here — they are injected conditionally below
-                if col in RETAIL_FIELDS:
+                # Only emit if column exists in this Excel file
+                if col not in df.columns:
                     continue
-                line_detail.append({"ref": col, "val": row[col]})
-                # After StandardLabel3, inject JokerTag if StandardLabel3 has a value
-                if col == "StandardLabel3" and std_label3_val.strip():
+                line_detail.append({"ref": col, "val": row_vals[col]})
+                # Inject JokerTag immediately after StandardLabel3 (if has value)
+                if col == "StandardLabel3" and std_label3_val:
                     line_detail.append({"ref": "JokerTag", "val": std_label3_val})
-                # After Rivet, inject UPC/ColorCode/ColorName/StyleName/StoreStyle if StandardLabel3 has a value
-                if col == "Rivet" and std_label3_val.strip():
+                # Inject retail fields immediately after Rivet (if StandardLabel3 has value)
+                if col == "Rivet" and std_label3_val:
                     for rf in ["UPC", "ColorCode", "ColorName", "StyleName", "StoreStyle"]:
-                        line_detail.append({"ref": rf, "val": row.get(rf, "") if rf in df.columns else ""})
+                        line_detail.append({"ref": rf, "val": row_vals.get(rf, "")})
+
+            # Append any extra columns not in LINE_DETAIL_ORDER (future-proof)
+            known = set(LINE_DETAIL_ORDER) | {"JokerTag", "UPC", "ColorCode", "ColorName", "StyleName", "StoreStyle"}
+            for col in line_detail_cols:
+                if col not in known and col in df.columns:
+                    line_detail.append({"ref": col, "val": row_vals[col]})
 
             order_line = {**line_fields, "OrderLineDetail": line_detail}
             order_lines.append(order_line)
