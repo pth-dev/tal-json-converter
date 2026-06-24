@@ -34,8 +34,9 @@ def json_to_excel(json_bytes: bytes) -> bytes:
 
     rows = []
     for order in orders:
-        header = {col: order.get(col, "") for col in HEADER_COLS}
-        header_detail = _pivot_detail(order.get("OrderHeaderDetail", []))
+        order_header = order.get("OrderHeader", order)  # fallback to order itself for backwards compat
+        header = {col: order_header.get(col, "") for col in HEADER_COLS}
+        header_detail = _pivot_detail(order_header.get("OrderHeaderDetail", []))
 
         for line in order.get("OrderLine", []):
             line_fields = {col: line.get(col, "") for col in LINE_COLS}
@@ -116,8 +117,10 @@ def excel_to_json(excel_bytes: bytes) -> bytes:
             order_lines.append(order_line)
 
         order = {
-            **order_header,
-            "OrderHeaderDetail": header_detail,
+            "OrderHeader": {
+                **order_header,
+                "OrderHeaderDetail": header_detail,
+            },
             "OrderLine": order_lines,
         }
         orders.append(order)

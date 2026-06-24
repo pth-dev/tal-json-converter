@@ -16,26 +16,27 @@ with tab1:
             data = json.loads(raw)
             orders = data.get("Order", [])
 
-            # Build preview rows
-            preview_rows = []
-            for order in orders[:5]:
-                header = {k: order.get(k, "") for k in ["OrderNumber", "ReferenceNo", "CustomerName", "OrderDate", "OrderType"]}
-                lines = order.get("OrderLine", [])
-                header["LineCount"] = len(lines)
-                preview_rows.append(header)
-
-            if preview_rows:
-                import pandas as pd
-                st.dataframe(pd.DataFrame(preview_rows), use_container_width=True)
-                st.caption(f"Showing up to 5 of {len(orders)} orders")
-
             excel_bytes = json_to_excel(raw)
             st.download_button(
-                label="Download Excel",
+                label="⬇️ Download Excel",
                 data=excel_bytes,
                 file_name="orders.xlsx",
                 mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
             )
+
+            # Build preview rows — supports both flat and OrderHeader-wrapped structures
+            import pandas as pd
+            preview_rows = []
+            for order in orders[:5]:
+                src = order.get("OrderHeader", order)
+                header = {k: src.get(k, "") for k in ["OrderNumber", "ReferenceNo", "CustomerName", "OrderDate", "OrderType"]}
+                header["LineCount"] = len(order.get("OrderLine", []))
+                preview_rows.append(header)
+
+            if preview_rows:
+                st.dataframe(pd.DataFrame(preview_rows), use_container_width=True)
+                st.caption(f"Showing up to 5 of {len(orders)} orders")
+
         except Exception as e:
             st.error(f"Error processing file: {e}")
 
@@ -49,14 +50,15 @@ with tab2:
             data = json.loads(json_bytes)
             orders = data.get("Order", [])
 
-            st.json(orders[:5])
-            st.caption(f"Showing up to 5 of {len(orders)} orders")
-
             st.download_button(
-                label="Download JSON",
+                label="⬇️ Download JSON",
                 data=json_bytes,
                 file_name="orders.json",
                 mime="application/json",
             )
+
+            st.json(orders[:5])
+            st.caption(f"Showing up to 5 of {len(orders)} orders")
+
         except Exception as e:
             st.error(f"Error processing file: {e}")
