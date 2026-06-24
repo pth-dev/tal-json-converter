@@ -115,10 +115,25 @@ def excel_to_json(excel_bytes: bytes) -> bytes:
         order_lines = []
         for _, row in group.iterrows():
             line_fields = {col: row[col] for col in LINE_COLS if col in df.columns}
-            line_detail = [
-                {"ref": col, "val": row[col]}
-                for col in line_detail_cols
-            ]
+
+            # Determine whether this line is short or regular based on which
+            # inseam fields have values. Mutually exclusive: if LInseam has a
+            # non-empty value use the regular pair; otherwise use the short pair.
+            has_regular_inseam = bool(row.get("LInseam", "").strip()) if "LInseam" in df.columns else False
+            has_short_inseam   = bool(row.get("LInseam short", "").strip()) if "LInseam short" in df.columns else False
+
+            INSEAM_REGULAR = {"LInseam", "RInseam"}
+            INSEAM_SHORT   = {"LInseam short", "RInseam short"}
+
+            line_detail = []
+            for col in line_detail_cols:
+                # Skip the inseam key that doesn't apply to this line
+                if col in INSEAM_REGULAR and not has_regular_inseam:
+                    continue
+                if col in INSEAM_SHORT and not has_short_inseam:
+                    continue
+                line_detail.append({"ref": col, "val": row[col]})
+
             order_line = {**line_fields, "OrderLineDetail": line_detail}
             order_lines.append(order_line)
 
