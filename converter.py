@@ -4,13 +4,18 @@ import pandas as pd
 import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment
 
-HEADER_COLS = [
+HEADER_COLS_COMMON = [
     "OrderNumber", "ReferenceNo", "RSVS", "OrderDate", "OrderType",
-    "ShipmentMethod", "PackagingMethod", "CustomerName",
+    "ShipmentMethod", "CustomerName",
     "ShiptoCustomerName", "CustomerAddress1", "CustomerAddress2", "CustomerAddress3",
     "CustomerAddressCity", "CustomerAddressState", "CustomerAddressZip",
     "CustomerAddressCountry", "CustomerPhoneNumber", "SalesPerson",
 ]
+
+# Pants header has PackagingMethod at the order level; Shirt does not
+HEADER_COLS_PANTS = HEADER_COLS_COMMON + ["PackagingMethod"]
+HEADER_COLS_SHIRT = HEADER_COLS_COMMON
+HEADER_COLS       = HEADER_COLS_PANTS  # kept for backwards compat
 
 HEADER_DETAIL_COLS = [
     "Courier", "CourierService", "ShipFromName",
@@ -85,7 +90,10 @@ def json_to_excel(json_bytes: bytes) -> bytes:
     rows = []
     for order in orders:
         order_header = order.get("OrderHeader", order)
-        header = {col: order_header.get(col, "") for col in HEADER_COLS}
+        # Detect product type from first line to pick correct header cols
+        first_line = order.get("OrderLine", [{}])[0]
+        hcols = HEADER_COLS_SHIRT if _is_shirt(first_line) else HEADER_COLS_PANTS
+        header = {col: order_header.get(col, "") for col in hcols}
         header_detail = _pivot_detail(order_header.get("OrderHeaderDetail", []))
 
         for line in order.get("OrderLine", []):
@@ -151,7 +159,8 @@ def excel_to_json(excel_bytes: bytes) -> bytes:
     # All non-header, non-line-level cols — used as fallback for extra fields
     all_line_detail_cols = [
         c for c in all_cols
-        if c not in HEADER_COLS and c not in HEADER_DETAIL_COLS
+        if c not in HEADER_COLS_PANTS and c not in HEADER_COLS_SHIRT
+        and c not in HEADER_DETAIL_COLS
         and c not in LINE_COLS_PANTS and c not in LINE_COLS_SHIRT
     ]
 
@@ -159,7 +168,12 @@ def excel_to_json(excel_bytes: bytes) -> bytes:
     for order_number, group in df.groupby("OrderNumber", sort=False):
         first = group.iloc[0]
 
-        order_header = {col: first[col] for col in HEADER_COLS if col in df.columns}
+        # Detect product type from first row of this order group
+        product_type = str(first.get("Product", "")).strip().lower()
+        is_shirt_order = product_type == "shirt"
+        hcols = HEADER_COLS_SHIRT if is_shirt_order else HEADER_COLS_PANTS
+
+        order_header = {col: first[col] for col in hcols if col in df.columns}
 
         header_detail = [
             {"ref": col, "val": first[col]}
