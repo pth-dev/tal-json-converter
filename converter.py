@@ -92,7 +92,7 @@ def json_to_excel(json_bytes: bytes) -> bytes:
 
 
 def excel_to_json(excel_bytes: bytes) -> bytes:
-    df = pd.read_excel(io.BytesIO(excel_bytes), dtype=str).fillna("")
+    df = pd.read_excel(io.BytesIO(excel_bytes), dtype=str, keep_default_na=False, na_values=[]).fillna("")
 
     all_cols = list(df.columns)
     line_detail_cols = [
@@ -125,14 +125,29 @@ def excel_to_json(excel_bytes: bytes) -> bytes:
             INSEAM_REGULAR = {"LInseam", "RInseam"}
             INSEAM_SHORT   = {"LInseam short", "RInseam short"}
 
+            # Fields injected only when StandardLabel3 has a value
+            RETAIL_FIELDS = ["JokerTag", "UPC", "ColorCode", "ColorName", "StyleName", "StoreStyle"]
+
             line_detail = []
+            std_label3_val = row.get("StandardLabel3", "") if "StandardLabel3" in df.columns else ""
+
             for col in line_detail_cols:
                 # Skip the inseam key that doesn't apply to this line
                 if col in INSEAM_REGULAR and not has_regular_inseam:
                     continue
                 if col in INSEAM_SHORT and not has_short_inseam:
                     continue
+                # Skip retail fields here — they are injected conditionally below
+                if col in RETAIL_FIELDS:
+                    continue
                 line_detail.append({"ref": col, "val": row[col]})
+                # After StandardLabel3, inject JokerTag if StandardLabel3 has a value
+                if col == "StandardLabel3" and std_label3_val.strip():
+                    line_detail.append({"ref": "JokerTag", "val": std_label3_val})
+                # After Rivet, inject UPC/ColorCode/ColorName/StyleName/StoreStyle if StandardLabel3 has a value
+                if col == "Rivet" and std_label3_val.strip():
+                    for rf in ["UPC", "ColorCode", "ColorName", "StyleName", "StoreStyle"]:
+                        line_detail.append({"ref": rf, "val": row.get(rf, "") if rf in df.columns else ""})
 
             order_line = {**line_fields, "OrderLineDetail": line_detail}
             order_lines.append(order_line)
