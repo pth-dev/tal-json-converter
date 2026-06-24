@@ -18,18 +18,20 @@ HEADER_DETAIL_COLS = [
     "DCName", "DCNumber", "StoreNumber", "StoreName",
 ]
 
-LINE_COLS = ["Product", "LineRefNo", "UnitRetailPrice", "Tier", "Quantity"]
+LINE_COLS_PANTS  = ["Product", "LineRefNo", "UnitRetailPrice", "Tier", "Quantity"]
+LINE_COLS_SHIRT  = ["Product", "Part", "LineRefNo", "UnitRetailPrice", "Tier", "Quantity"]
+LINE_COLS        = LINE_COLS_PANTS  # default; overridden per-row in excel_to_json
 
-# Canonical order for OrderLineDetail fields.
-# LInseam short / RInseam short occupy the same position as LInseam / RInseam.
-LINE_DETAIL_ORDER = [
+# Canonical order for Pants OrderLineDetail fields.
+# LInseam short / RInseam short occupy the same position slot as LInseam / RInseam.
+LINE_DETAIL_ORDER_PANTS = [
     "Style", "MainFabric", "StanttFabric", "FabricName", "PocketingFabric",
     "FrontStyle", "FrontCrease", "Hem", "FrenchFly", "WaistbandExtension",
     "WaistbandGripper", "Button", "Washing", "Dipping", "Monogram",
     "MonogramInitial", "MonogramLocation", "MonogramFont", "MonogramColor",
     "Size", "Fit", "Hip", "Waist",
-    "LInseam", "RInseam",           # regular trousers
-    "LInseam short", "RInseam short",  # shorts — same position slot
+    "LInseam", "RInseam",
+    "LInseam short", "RInseam short",
     "IncrRise", "DecrRise", "Thigh", "Knee", "Ankle",
     "FrontPocket", "FrontPocketReinforcement", "BackPocket", "BackPocketLabel",
     "Label", "EDI_PO", "HangTag1", "HangTag2", "Rush",
@@ -37,6 +39,30 @@ LINE_DETAIL_ORDER = [
     # JokerTag injected here when StandardLabel3 has value
     "StandardLabel4", "PackingSlipSize", "Zipper", "Rivet",
     # UPC/ColorCode/ColorName/StyleName/StoreStyle injected here when StandardLabel3 has value
+    "NewAlteration",
+]
+
+# Canonical order for Shirt OrderLineDetail fields.
+LINE_DETAIL_ORDER_SHIRT = [
+    "RushOrder", "Style", "PackagingMethod", "MainFabric", "StanttFabric", "FabricName",
+    "Collar", "Cuff", "Placket", "CollarBandButton", "CollarPiping", "Hem",
+    "Pocket", "PocketType", "ButtonColor", "CenterBackCollarButton",
+    "ContrastButtonHoleStitch", "ContrastButtonHoleStitchLocation",
+    "ButtonThreadColor", "TopButtonThreadColor", "Washing", "ArmHoleTaping",
+    "Contrast", "InsideContrastID",
+    "Monogram", "MonogramInitial", "MonogramLocation", "MonogramFont", "MonogramColor",
+    "EmbroideryImage", "EmbroideryLocation", "EmbroideryStyle",
+    "Grosgrain", "Yoke", "Pleats",
+    "Size", "Tail", "Waist", "Neck", "Bicep", "LeftSleeve", "RightSleeve",
+    "Hip", "AcrossShoulder", "Armhole",
+    "LeftCuffHeight", "RightCuffHeight", "CollarRoll", "Chest",
+    "LeftCuffCirc", "RightCuffCirc", "CollarStay",
+    "MainLabel", "SizeLabel", "StandardLabel1", "StandardLabel2", "CareLabelText",
+    "HangTag1", "HangTag2",
+    "UPC", "UPC2", "UPC3", "QRURL", "EDI_PO", "SPI",
+    "PackingSlipSize", "PackingSlipDesc",
+    "HangerLoop", "HangerLoopContrast", "HangerLoopPlacement",
+    "ColorCode", "ColorName", "StyleName", "StoreStyle",
     "NewAlteration",
 ]
 
@@ -48,18 +74,24 @@ def _pivot_detail(detail_list):
     return {item.get("ref", ""): item.get("val", "") for item in detail_list}
 
 
+def _is_shirt(line: dict) -> bool:
+    return str(line.get("Product", "")).strip().lower() == "shirt"
+
+
 def json_to_excel(json_bytes: bytes) -> bytes:
     data = json.loads(json_bytes)
     orders = data.get("Order", [])
 
     rows = []
     for order in orders:
-        order_header = order.get("OrderHeader", order)  # fallback to order itself for backwards compat
+        order_header = order.get("OrderHeader", order)
         header = {col: order_header.get(col, "") for col in HEADER_COLS}
         header_detail = _pivot_detail(order_header.get("OrderHeaderDetail", []))
 
         for line in order.get("OrderLine", []):
-            line_fields = {col: line.get(col, "") for col in LINE_COLS}
+            # Pick the right line-level columns based on product type
+            lcols = LINE_COLS_SHIRT if _is_shirt(line) else LINE_COLS_PANTS
+            line_fields = {col: line.get(col, "") for col in lcols}
             line_detail = _pivot_detail(line.get("OrderLineDetail", []))
             row = {**header, **header_detail, **line_fields, **line_detail}
             rows.append(row)
@@ -115,9 +147,12 @@ def excel_to_json(excel_bytes: bytes) -> bytes:
     df = pd.read_excel(io.BytesIO(excel_bytes), dtype=str, keep_default_na=False, na_values=[]).fillna("")
 
     all_cols = list(df.columns)
-    line_detail_cols = [
+
+    # All non-header, non-line-level cols — used as fallback for extra fields
+    all_line_detail_cols = [
         c for c in all_cols
-        if c not in HEADER_COLS and c not in HEADER_DETAIL_COLS and c not in LINE_COLS
+        if c not in HEADER_COLS and c not in HEADER_DETAIL_COLS
+        and c not in LINE_COLS_PANTS and c not in LINE_COLS_SHIRT
     ]
 
     orders = []
@@ -134,41 +169,52 @@ def excel_to_json(excel_bytes: bytes) -> bytes:
 
         order_lines = []
         for _, row in group.iterrows():
-            line_fields = {col: row[col] for col in LINE_COLS if col in df.columns}
+            product = str(row.get("Product", "")).strip().lower()
+            is_shirt = product == "shirt"
 
-            # Determine inseam type: regular (LInseam) or short (LInseam short)
-            has_regular_inseam = bool(str(row.get("LInseam", "")).strip()) if "LInseam" in df.columns else False
-            has_short_inseam   = bool(str(row.get("LInseam short", "")).strip()) if "LInseam short" in df.columns else False
+            lcols = LINE_COLS_SHIRT if is_shirt else LINE_COLS_PANTS
+            line_fields = {col: row[col] for col in lcols if col in df.columns}
 
-            std_label3_val = str(row.get("StandardLabel3", "")).strip() if "StandardLabel3" in df.columns else ""
-
-            # Build a lookup of all available values for this row
             row_vals = {col: row[col] for col in df.columns}
 
-            line_detail = []
-            for col in LINE_DETAIL_ORDER:
-                # Skip inseam pair that doesn't apply
-                if col in ("LInseam", "RInseam") and not has_regular_inseam:
-                    continue
-                if col in ("LInseam short", "RInseam short") and not has_short_inseam:
-                    continue
-                # Only emit if column exists in this Excel file
-                if col not in df.columns:
-                    continue
-                line_detail.append({"ref": col, "val": row_vals[col]})
-                # Inject JokerTag immediately after StandardLabel3 (if has value)
-                if col == "StandardLabel3" and std_label3_val:
-                    line_detail.append({"ref": "JokerTag", "val": std_label3_val})
-                # Inject retail fields immediately after Rivet (if StandardLabel3 has value)
-                if col == "Rivet" and std_label3_val:
-                    for rf in ["UPC", "ColorCode", "ColorName", "StyleName", "StoreStyle"]:
-                        line_detail.append({"ref": rf, "val": row_vals.get(rf, "")})
-
-            # Append any extra columns not in LINE_DETAIL_ORDER (future-proof)
-            known = set(LINE_DETAIL_ORDER) | {"JokerTag", "UPC", "ColorCode", "ColorName", "StyleName", "StoreStyle"}
-            for col in line_detail_cols:
-                if col not in known and col in df.columns:
+            if is_shirt:
+                # Shirt: emit fields in canonical shirt order, no inseam/JokerTag logic
+                line_detail = []
+                known_shirt = set(LINE_DETAIL_ORDER_SHIRT)
+                for col in LINE_DETAIL_ORDER_SHIRT:
+                    if col not in df.columns:
+                        continue
                     line_detail.append({"ref": col, "val": row_vals[col]})
+                # Append any extra columns not in shirt schema (future-proof)
+                for col in all_line_detail_cols:
+                    if col not in known_shirt and col not in set(LINE_COLS_SHIRT):
+                        line_detail.append({"ref": col, "val": row_vals[col]})
+            else:
+                # Pants: inseam mutual exclusion + conditional JokerTag/retail fields
+                has_regular_inseam = bool(str(row_vals.get("LInseam", "")).strip()) if "LInseam" in df.columns else False
+                has_short_inseam   = bool(str(row_vals.get("LInseam short", "")).strip()) if "LInseam short" in df.columns else False
+                std_label3_val     = str(row_vals.get("StandardLabel3", "")).strip() if "StandardLabel3" in df.columns else ""
+
+                line_detail = []
+                for col in LINE_DETAIL_ORDER_PANTS:
+                    if col in ("LInseam", "RInseam") and not has_regular_inseam:
+                        continue
+                    if col in ("LInseam short", "RInseam short") and not has_short_inseam:
+                        continue
+                    if col not in df.columns:
+                        continue
+                    line_detail.append({"ref": col, "val": row_vals[col]})
+                    if col == "StandardLabel3" and std_label3_val:
+                        line_detail.append({"ref": "JokerTag", "val": std_label3_val})
+                    if col == "Rivet" and std_label3_val:
+                        for rf in ["UPC", "ColorCode", "ColorName", "StyleName", "StoreStyle"]:
+                            line_detail.append({"ref": rf, "val": row_vals.get(rf, "")})
+
+                # Append any extra columns not in pants schema (future-proof)
+                known_pants = set(LINE_DETAIL_ORDER_PANTS) | {"JokerTag", "UPC", "ColorCode", "ColorName", "StyleName", "StoreStyle"}
+                for col in all_line_detail_cols:
+                    if col not in known_pants and col not in set(LINE_COLS_PANTS):
+                        line_detail.append({"ref": col, "val": row_vals[col]})
 
             order_line = {**line_fields, "OrderLineDetail": line_detail}
             order_lines.append(order_line)

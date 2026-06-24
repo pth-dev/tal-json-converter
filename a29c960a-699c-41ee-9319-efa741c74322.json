@@ -1,0 +1,3479 @@
+{
+  "Order": [
+    {
+      "OrderHeader": {
+        "OrderNumber": "2136238",
+        "ReferenceNo": "62226OxfordNRContrast",
+        "RSVS": "62226OxfordNRContrast",
+        "OrderDate": "2026-06-22",
+        "OrderType": "INV",
+        "ShipmentMethod": "Store",
+        "CustomerName": "Jason Novosel",
+        "ShiptoCustomerName": "Murray's Toggery Shop - Jason Novosel",
+        "CustomerAddress1": "62 Main Street",
+        "CustomerAddress2": "",
+        "CustomerAddress3": "",
+        "CustomerAddressCity": "Nantucket",
+        "CustomerAddressState": "MA",
+        "CustomerAddressZip": "02554",
+        "CustomerAddressCountry": "US",
+        "CustomerPhoneNumber": "18005563695",
+        "SalesPerson": "Katie",
+        "OrderHeaderDetail": [
+          {
+            "ref": "Courier",
+            "val": "UPS"
+          },
+          {
+            "ref": "CourierService",
+            "val": "Expedited"
+          },
+          {
+            "ref": "ShipFromName",
+            "val": "Stantt"
+          },
+          {
+            "ref": "ShipFromAdd1",
+            "val": "134 West 29th Street"
+          },
+          {
+            "ref": "ShipFromAdd2",
+            "val": "Suite 1006"
+          },
+          {
+            "ref": "ShipFromAdd3",
+            "val": "New York, NY 10001 US"
+          },
+          {
+            "ref": "DCName",
+            "val": ""
+          },
+          {
+            "ref": "DCNumber",
+            "val": ""
+          },
+          {
+            "ref": "StoreNumber",
+            "val": ""
+          },
+          {
+            "ref": "StoreName",
+            "val": ""
+          }
+        ]
+      },
+      "OrderLine": [
+        {
+          "Product": "Shirt",
+          "Part": "",
+          "LineRefNo": "601",
+          "UnitRetailPrice": "89.00",
+          "Tier": "1A",
+          "Quantity": "4",
+          "OrderLineDetail": [
+            {
+              "ref": "RushOrder",
+              "val": "No"
+            },
+            {
+              "ref": "Style",
+              "val": "Stantt Core"
+            },
+            {
+              "ref": "PackagingMethod",
+              "val": "Patrick James"
+            },
+            {
+              "ref": "MainFabric",
+              "val": "FW01048681-0002"
+            },
+            {
+              "ref": "StanttFabric",
+              "val": "ST152"
+            },
+            {
+              "ref": "FabricName",
+              "val": "Cambridge White Oxford"
+            },
+            {
+              "ref": "Collar",
+              "val": "Button Down"
+            },
+            {
+              "ref": "Cuff",
+              "val": "Double Button Barrel"
+            },
+            {
+              "ref": "Placket",
+              "val": "Standard"
+            },
+            {
+              "ref": "CollarBandButton",
+              "val": ""
+            },
+            {
+              "ref": "CollarPiping",
+              "val": "None"
+            },
+            {
+              "ref": "Hem",
+              "val": "Curve Hem"
+            },
+            {
+              "ref": "Pocket",
+              "val": "Left Pocket"
+            },
+            {
+              "ref": "PocketType",
+              "val": "Spade"
+            },
+            {
+              "ref": "ButtonColor",
+              "val": "Natural White"
+            },
+            {
+              "ref": "CenterBackCollarButton",
+              "val": "Natural White"
+            },
+            {
+              "ref": "ContrastButtonHoleStitch",
+              "val": "Nantucket Red"
+            },
+            {
+              "ref": "ContrastButtonHoleStitchLocation",
+              "val": "Murray"
+            },
+            {
+              "ref": "ButtonThreadColor",
+              "val": "No"
+            },
+            {
+              "ref": "TopButtonThreadColor",
+              "val": "Nantucket Red"
+            },
+            {
+              "ref": "Washing",
+              "val": "No Wash"
+            },
+            {
+              "ref": "ArmHoleTaping",
+              "val": "No"
+            },
+            {
+              "ref": "Contrast",
+              "val": "Inside Collar and Button Placket"
+            },
+            {
+              "ref": "InsideContrastID",
+              "val": "FW01057723-0001"
+            },
+            {
+              "ref": "Monogram",
+              "val": "No"
+            },
+            {
+              "ref": "MonogramInitial",
+              "val": ""
+            },
+            {
+              "ref": "MonogramLocation",
+              "val": ""
+            },
+            {
+              "ref": "MonogramFont",
+              "val": ""
+            },
+            {
+              "ref": "MonogramColor",
+              "val": ""
+            },
+            {
+              "ref": "EmbroideryImage",
+              "val": "Murrays Toggery Island"
+            },
+            {
+              "ref": "EmbroideryLocation",
+              "val": "Sleeve Placket Right"
+            },
+            {
+              "ref": "EmbroideryStyle",
+              "val": ""
+            },
+            {
+              "ref": "Grosgrain",
+              "val": "No"
+            },
+            {
+              "ref": "Yoke",
+              "val": "Standard"
+            },
+            {
+              "ref": "Pleats",
+              "val": "No"
+            },
+            {
+              "ref": "Size",
+              "val": "Morris"
+            },
+            {
+              "ref": "Tail",
+              "val": "0.0"
+            },
+            {
+              "ref": "Waist",
+              "val": "0.0"
+            },
+            {
+              "ref": "Neck",
+              "val": "0.0"
+            },
+            {
+              "ref": "Bicep",
+              "val": "0.0"
+            },
+            {
+              "ref": "LeftSleeve",
+              "val": "0.0"
+            },
+            {
+              "ref": "RightSleeve",
+              "val": "0.0"
+            },
+            {
+              "ref": "Hip",
+              "val": "0.0"
+            },
+            {
+              "ref": "AcrossShoulder",
+              "val": "0.0"
+            },
+            {
+              "ref": "Armhole",
+              "val": "0.0"
+            },
+            {
+              "ref": "LeftCuffHeight",
+              "val": "0.0"
+            },
+            {
+              "ref": "RightCuffHeight",
+              "val": "0.0"
+            },
+            {
+              "ref": "CollarRoll",
+              "val": "0.0"
+            },
+            {
+              "ref": "Chest",
+              "val": "0.0"
+            },
+            {
+              "ref": "LeftCuffCirc",
+              "val": "0.0"
+            },
+            {
+              "ref": "RightCuffCirc",
+              "val": "0.0"
+            },
+            {
+              "ref": "CollarStay",
+              "val": ""
+            },
+            {
+              "ref": "MainLabel",
+              "val": "Woven - MURRAY'S"
+            },
+            {
+              "ref": "SizeLabel",
+              "val": ""
+            },
+            {
+              "ref": "StandardLabel1",
+              "val": "L"
+            },
+            {
+              "ref": "StandardLabel2",
+              "val": "Classic"
+            },
+            {
+              "ref": "CareLabelText",
+              "val": "Cotton"
+            },
+            {
+              "ref": "HangTag1",
+              "val": ""
+            },
+            {
+              "ref": "HangTag2",
+              "val": ""
+            },
+            {
+              "ref": "UPC",
+              "val": ""
+            },
+            {
+              "ref": "UPC2",
+              "val": ""
+            },
+            {
+              "ref": "UPC3",
+              "val": ""
+            },
+            {
+              "ref": "QRURL",
+              "val": ""
+            },
+            {
+              "ref": "EDI_PO",
+              "val": ""
+            },
+            {
+              "ref": "SPI",
+              "val": "16"
+            },
+            {
+              "ref": "PackingSlipSize",
+              "val": "L"
+            },
+            {
+              "ref": "PackingSlipDesc",
+              "val": ""
+            },
+            {
+              "ref": "HangerLoop",
+              "val": "No"
+            },
+            {
+              "ref": "HangerLoopContrast",
+              "val": "Self"
+            },
+            {
+              "ref": "HangerLoopPlacement",
+              "val": ""
+            },
+            {
+              "ref": "ColorCode",
+              "val": ""
+            },
+            {
+              "ref": "ColorName",
+              "val": ""
+            },
+            {
+              "ref": "StyleName",
+              "val": ""
+            },
+            {
+              "ref": "StoreStyle",
+              "val": ""
+            },
+            {
+              "ref": "NewAlteration",
+              "val": "No"
+            }
+          ]
+        },
+        {
+          "Product": "Shirt",
+          "Part": "",
+          "LineRefNo": "602",
+          "UnitRetailPrice": "89.00",
+          "Tier": "1A",
+          "Quantity": "6",
+          "OrderLineDetail": [
+            {
+              "ref": "RushOrder",
+              "val": "No"
+            },
+            {
+              "ref": "Style",
+              "val": "Stantt Core 2"
+            },
+            {
+              "ref": "PackagingMethod",
+              "val": "Patrick James"
+            },
+            {
+              "ref": "MainFabric",
+              "val": "FW01048681-0002"
+            },
+            {
+              "ref": "StanttFabric",
+              "val": "ST152"
+            },
+            {
+              "ref": "FabricName",
+              "val": "Cambridge White Oxford"
+            },
+            {
+              "ref": "Collar",
+              "val": "Button Down"
+            },
+            {
+              "ref": "Cuff",
+              "val": "Double Button Barrel"
+            },
+            {
+              "ref": "Placket",
+              "val": "Standard"
+            },
+            {
+              "ref": "CollarBandButton",
+              "val": ""
+            },
+            {
+              "ref": "CollarPiping",
+              "val": "None"
+            },
+            {
+              "ref": "Hem",
+              "val": "Curve Hem"
+            },
+            {
+              "ref": "Pocket",
+              "val": "Left Pocket"
+            },
+            {
+              "ref": "PocketType",
+              "val": "Spade"
+            },
+            {
+              "ref": "ButtonColor",
+              "val": "Natural White"
+            },
+            {
+              "ref": "CenterBackCollarButton",
+              "val": "Natural White"
+            },
+            {
+              "ref": "ContrastButtonHoleStitch",
+              "val": "Nantucket Red"
+            },
+            {
+              "ref": "ContrastButtonHoleStitchLocation",
+              "val": "Murray"
+            },
+            {
+              "ref": "ButtonThreadColor",
+              "val": "No"
+            },
+            {
+              "ref": "TopButtonThreadColor",
+              "val": "Nantucket Red"
+            },
+            {
+              "ref": "Washing",
+              "val": "No Wash"
+            },
+            {
+              "ref": "ArmHoleTaping",
+              "val": "No"
+            },
+            {
+              "ref": "Contrast",
+              "val": "Inside Collar and Button Placket"
+            },
+            {
+              "ref": "InsideContrastID",
+              "val": "FW01057723-0001"
+            },
+            {
+              "ref": "Monogram",
+              "val": "No"
+            },
+            {
+              "ref": "MonogramInitial",
+              "val": ""
+            },
+            {
+              "ref": "MonogramLocation",
+              "val": ""
+            },
+            {
+              "ref": "MonogramFont",
+              "val": ""
+            },
+            {
+              "ref": "MonogramColor",
+              "val": ""
+            },
+            {
+              "ref": "EmbroideryImage",
+              "val": "Murrays Toggery Island"
+            },
+            {
+              "ref": "EmbroideryLocation",
+              "val": "Sleeve Placket Right"
+            },
+            {
+              "ref": "EmbroideryStyle",
+              "val": ""
+            },
+            {
+              "ref": "Grosgrain",
+              "val": "No"
+            },
+            {
+              "ref": "Yoke",
+              "val": "Standard"
+            },
+            {
+              "ref": "Pleats",
+              "val": "No"
+            },
+            {
+              "ref": "Size",
+              "val": "Grand"
+            },
+            {
+              "ref": "Tail",
+              "val": "0.0"
+            },
+            {
+              "ref": "Waist",
+              "val": "0.0"
+            },
+            {
+              "ref": "Neck",
+              "val": "0.0"
+            },
+            {
+              "ref": "Bicep",
+              "val": "0.0"
+            },
+            {
+              "ref": "LeftSleeve",
+              "val": "0.0"
+            },
+            {
+              "ref": "RightSleeve",
+              "val": "0.0"
+            },
+            {
+              "ref": "Hip",
+              "val": "0.0"
+            },
+            {
+              "ref": "AcrossShoulder",
+              "val": "0.0"
+            },
+            {
+              "ref": "Armhole",
+              "val": "0.0"
+            },
+            {
+              "ref": "LeftCuffHeight",
+              "val": "0.0"
+            },
+            {
+              "ref": "RightCuffHeight",
+              "val": "0.0"
+            },
+            {
+              "ref": "CollarRoll",
+              "val": "0.0"
+            },
+            {
+              "ref": "Chest",
+              "val": "0.0"
+            },
+            {
+              "ref": "LeftCuffCirc",
+              "val": "0.0"
+            },
+            {
+              "ref": "RightCuffCirc",
+              "val": "0.0"
+            },
+            {
+              "ref": "CollarStay",
+              "val": ""
+            },
+            {
+              "ref": "MainLabel",
+              "val": "Woven - MURRAY'S"
+            },
+            {
+              "ref": "SizeLabel",
+              "val": ""
+            },
+            {
+              "ref": "StandardLabel1",
+              "val": "XL"
+            },
+            {
+              "ref": "StandardLabel2",
+              "val": "Classic"
+            },
+            {
+              "ref": "CareLabelText",
+              "val": "Cotton"
+            },
+            {
+              "ref": "HangTag1",
+              "val": ""
+            },
+            {
+              "ref": "HangTag2",
+              "val": ""
+            },
+            {
+              "ref": "UPC",
+              "val": ""
+            },
+            {
+              "ref": "UPC2",
+              "val": ""
+            },
+            {
+              "ref": "UPC3",
+              "val": ""
+            },
+            {
+              "ref": "QRURL",
+              "val": ""
+            },
+            {
+              "ref": "EDI_PO",
+              "val": ""
+            },
+            {
+              "ref": "SPI",
+              "val": "16"
+            },
+            {
+              "ref": "PackingSlipSize",
+              "val": "XL"
+            },
+            {
+              "ref": "PackingSlipDesc",
+              "val": ""
+            },
+            {
+              "ref": "HangerLoop",
+              "val": "No"
+            },
+            {
+              "ref": "HangerLoopContrast",
+              "val": "Self"
+            },
+            {
+              "ref": "HangerLoopPlacement",
+              "val": ""
+            },
+            {
+              "ref": "ColorCode",
+              "val": ""
+            },
+            {
+              "ref": "ColorName",
+              "val": ""
+            },
+            {
+              "ref": "StyleName",
+              "val": ""
+            },
+            {
+              "ref": "StoreStyle",
+              "val": ""
+            },
+            {
+              "ref": "NewAlteration",
+              "val": "No"
+            }
+          ]
+        },
+        {
+          "Product": "Shirt",
+          "Part": "",
+          "LineRefNo": "603",
+          "UnitRetailPrice": "89.00",
+          "Tier": "1A",
+          "Quantity": "2",
+          "OrderLineDetail": [
+            {
+              "ref": "RushOrder",
+              "val": "No"
+            },
+            {
+              "ref": "Style",
+              "val": "Stantt Core 2"
+            },
+            {
+              "ref": "PackagingMethod",
+              "val": "Patrick James"
+            },
+            {
+              "ref": "MainFabric",
+              "val": "FW01048681-0002"
+            },
+            {
+              "ref": "StanttFabric",
+              "val": "ST152"
+            },
+            {
+              "ref": "FabricName",
+              "val": "Cambridge White Oxford"
+            },
+            {
+              "ref": "Collar",
+              "val": "Button Down"
+            },
+            {
+              "ref": "Cuff",
+              "val": "Double Button Barrel"
+            },
+            {
+              "ref": "Placket",
+              "val": "Standard"
+            },
+            {
+              "ref": "CollarBandButton",
+              "val": ""
+            },
+            {
+              "ref": "CollarPiping",
+              "val": "None"
+            },
+            {
+              "ref": "Hem",
+              "val": "Curve Hem"
+            },
+            {
+              "ref": "Pocket",
+              "val": "Left Pocket"
+            },
+            {
+              "ref": "PocketType",
+              "val": "Spade"
+            },
+            {
+              "ref": "ButtonColor",
+              "val": "Natural White"
+            },
+            {
+              "ref": "CenterBackCollarButton",
+              "val": "Natural White"
+            },
+            {
+              "ref": "ContrastButtonHoleStitch",
+              "val": "Nantucket Red"
+            },
+            {
+              "ref": "ContrastButtonHoleStitchLocation",
+              "val": "Murray"
+            },
+            {
+              "ref": "ButtonThreadColor",
+              "val": "No"
+            },
+            {
+              "ref": "TopButtonThreadColor",
+              "val": "Nantucket Red"
+            },
+            {
+              "ref": "Washing",
+              "val": "No Wash"
+            },
+            {
+              "ref": "ArmHoleTaping",
+              "val": "No"
+            },
+            {
+              "ref": "Contrast",
+              "val": "Inside Collar and Button Placket"
+            },
+            {
+              "ref": "InsideContrastID",
+              "val": "FW01057723-0001"
+            },
+            {
+              "ref": "Monogram",
+              "val": "No"
+            },
+            {
+              "ref": "MonogramInitial",
+              "val": ""
+            },
+            {
+              "ref": "MonogramLocation",
+              "val": ""
+            },
+            {
+              "ref": "MonogramFont",
+              "val": ""
+            },
+            {
+              "ref": "MonogramColor",
+              "val": ""
+            },
+            {
+              "ref": "EmbroideryImage",
+              "val": "Murrays Toggery Island"
+            },
+            {
+              "ref": "EmbroideryLocation",
+              "val": "Sleeve Placket Right"
+            },
+            {
+              "ref": "EmbroideryStyle",
+              "val": ""
+            },
+            {
+              "ref": "Grosgrain",
+              "val": "No"
+            },
+            {
+              "ref": "Yoke",
+              "val": "Standard"
+            },
+            {
+              "ref": "Pleats",
+              "val": "No"
+            },
+            {
+              "ref": "Size",
+              "val": "Thames"
+            },
+            {
+              "ref": "Tail",
+              "val": "0.0"
+            },
+            {
+              "ref": "Waist",
+              "val": "0.0"
+            },
+            {
+              "ref": "Neck",
+              "val": "0.0"
+            },
+            {
+              "ref": "Bicep",
+              "val": "0.0"
+            },
+            {
+              "ref": "LeftSleeve",
+              "val": "0.0"
+            },
+            {
+              "ref": "RightSleeve",
+              "val": "0.0"
+            },
+            {
+              "ref": "Hip",
+              "val": "0.0"
+            },
+            {
+              "ref": "AcrossShoulder",
+              "val": "0.0"
+            },
+            {
+              "ref": "Armhole",
+              "val": "0.0"
+            },
+            {
+              "ref": "LeftCuffHeight",
+              "val": "0.0"
+            },
+            {
+              "ref": "RightCuffHeight",
+              "val": "0.0"
+            },
+            {
+              "ref": "CollarRoll",
+              "val": "0.0"
+            },
+            {
+              "ref": "Chest",
+              "val": "0.0"
+            },
+            {
+              "ref": "LeftCuffCirc",
+              "val": "0.0"
+            },
+            {
+              "ref": "RightCuffCirc",
+              "val": "0.0"
+            },
+            {
+              "ref": "CollarStay",
+              "val": ""
+            },
+            {
+              "ref": "MainLabel",
+              "val": "Woven - MURRAY'S"
+            },
+            {
+              "ref": "SizeLabel",
+              "val": ""
+            },
+            {
+              "ref": "StandardLabel1",
+              "val": "2XL"
+            },
+            {
+              "ref": "StandardLabel2",
+              "val": "Classic"
+            },
+            {
+              "ref": "CareLabelText",
+              "val": "Cotton"
+            },
+            {
+              "ref": "HangTag1",
+              "val": ""
+            },
+            {
+              "ref": "HangTag2",
+              "val": ""
+            },
+            {
+              "ref": "UPC",
+              "val": ""
+            },
+            {
+              "ref": "UPC2",
+              "val": ""
+            },
+            {
+              "ref": "UPC3",
+              "val": ""
+            },
+            {
+              "ref": "QRURL",
+              "val": ""
+            },
+            {
+              "ref": "EDI_PO",
+              "val": ""
+            },
+            {
+              "ref": "SPI",
+              "val": "16"
+            },
+            {
+              "ref": "PackingSlipSize",
+              "val": "2XL"
+            },
+            {
+              "ref": "PackingSlipDesc",
+              "val": ""
+            },
+            {
+              "ref": "HangerLoop",
+              "val": "No"
+            },
+            {
+              "ref": "HangerLoopContrast",
+              "val": "Self"
+            },
+            {
+              "ref": "HangerLoopPlacement",
+              "val": ""
+            },
+            {
+              "ref": "ColorCode",
+              "val": ""
+            },
+            {
+              "ref": "ColorName",
+              "val": ""
+            },
+            {
+              "ref": "StyleName",
+              "val": ""
+            },
+            {
+              "ref": "StoreStyle",
+              "val": ""
+            },
+            {
+              "ref": "NewAlteration",
+              "val": "No"
+            }
+          ]
+        },
+        {
+          "Product": "Shirt",
+          "Part": "",
+          "LineRefNo": "401",
+          "UnitRetailPrice": "89.00",
+          "Tier": "1A",
+          "Quantity": "6",
+          "OrderLineDetail": [
+            {
+              "ref": "RushOrder",
+              "val": "No"
+            },
+            {
+              "ref": "Style",
+              "val": "Stantt Core"
+            },
+            {
+              "ref": "PackagingMethod",
+              "val": "Patrick James"
+            },
+            {
+              "ref": "MainFabric",
+              "val": "FW01048682-0001"
+            },
+            {
+              "ref": "StanttFabric",
+              "val": "ST156"
+            },
+            {
+              "ref": "FabricName",
+              "val": "Cambridge University Stripe Oxford"
+            },
+            {
+              "ref": "Collar",
+              "val": "Button Down"
+            },
+            {
+              "ref": "Cuff",
+              "val": "Double Button Barrel"
+            },
+            {
+              "ref": "Placket",
+              "val": "Standard"
+            },
+            {
+              "ref": "CollarBandButton",
+              "val": ""
+            },
+            {
+              "ref": "CollarPiping",
+              "val": "None"
+            },
+            {
+              "ref": "Hem",
+              "val": "Curve Hem"
+            },
+            {
+              "ref": "Pocket",
+              "val": "Left Pocket"
+            },
+            {
+              "ref": "PocketType",
+              "val": "Spade"
+            },
+            {
+              "ref": "ButtonColor",
+              "val": "Natural White"
+            },
+            {
+              "ref": "CenterBackCollarButton",
+              "val": "Natural White"
+            },
+            {
+              "ref": "ContrastButtonHoleStitch",
+              "val": "Nantucket Red"
+            },
+            {
+              "ref": "ContrastButtonHoleStitchLocation",
+              "val": "Murray"
+            },
+            {
+              "ref": "ButtonThreadColor",
+              "val": "No"
+            },
+            {
+              "ref": "TopButtonThreadColor",
+              "val": "Nantucket Red"
+            },
+            {
+              "ref": "Washing",
+              "val": "No Wash"
+            },
+            {
+              "ref": "ArmHoleTaping",
+              "val": "No"
+            },
+            {
+              "ref": "Contrast",
+              "val": "Inside Collar and Button Placket"
+            },
+            {
+              "ref": "InsideContrastID",
+              "val": "FW01057723-0001"
+            },
+            {
+              "ref": "Monogram",
+              "val": "No"
+            },
+            {
+              "ref": "MonogramInitial",
+              "val": ""
+            },
+            {
+              "ref": "MonogramLocation",
+              "val": ""
+            },
+            {
+              "ref": "MonogramFont",
+              "val": ""
+            },
+            {
+              "ref": "MonogramColor",
+              "val": ""
+            },
+            {
+              "ref": "EmbroideryImage",
+              "val": "Murrays Toggery Island"
+            },
+            {
+              "ref": "EmbroideryLocation",
+              "val": "Sleeve Placket Right"
+            },
+            {
+              "ref": "EmbroideryStyle",
+              "val": ""
+            },
+            {
+              "ref": "Grosgrain",
+              "val": "No"
+            },
+            {
+              "ref": "Yoke",
+              "val": "Standard"
+            },
+            {
+              "ref": "Pleats",
+              "val": "No"
+            },
+            {
+              "ref": "Size",
+              "val": "Morris"
+            },
+            {
+              "ref": "Tail",
+              "val": "0.0"
+            },
+            {
+              "ref": "Waist",
+              "val": "0.0"
+            },
+            {
+              "ref": "Neck",
+              "val": "0.0"
+            },
+            {
+              "ref": "Bicep",
+              "val": "0.0"
+            },
+            {
+              "ref": "LeftSleeve",
+              "val": "0.0"
+            },
+            {
+              "ref": "RightSleeve",
+              "val": "0.0"
+            },
+            {
+              "ref": "Hip",
+              "val": "0.0"
+            },
+            {
+              "ref": "AcrossShoulder",
+              "val": "0.0"
+            },
+            {
+              "ref": "Armhole",
+              "val": "0.0"
+            },
+            {
+              "ref": "LeftCuffHeight",
+              "val": "0.0"
+            },
+            {
+              "ref": "RightCuffHeight",
+              "val": "0.0"
+            },
+            {
+              "ref": "CollarRoll",
+              "val": "0.0"
+            },
+            {
+              "ref": "Chest",
+              "val": "0.0"
+            },
+            {
+              "ref": "LeftCuffCirc",
+              "val": "0.0"
+            },
+            {
+              "ref": "RightCuffCirc",
+              "val": "0.0"
+            },
+            {
+              "ref": "CollarStay",
+              "val": ""
+            },
+            {
+              "ref": "MainLabel",
+              "val": "Woven - MURRAY'S"
+            },
+            {
+              "ref": "SizeLabel",
+              "val": ""
+            },
+            {
+              "ref": "StandardLabel1",
+              "val": "L"
+            },
+            {
+              "ref": "StandardLabel2",
+              "val": "Classic"
+            },
+            {
+              "ref": "CareLabelText",
+              "val": "Cotton"
+            },
+            {
+              "ref": "HangTag1",
+              "val": ""
+            },
+            {
+              "ref": "HangTag2",
+              "val": ""
+            },
+            {
+              "ref": "UPC",
+              "val": ""
+            },
+            {
+              "ref": "UPC2",
+              "val": ""
+            },
+            {
+              "ref": "UPC3",
+              "val": ""
+            },
+            {
+              "ref": "QRURL",
+              "val": ""
+            },
+            {
+              "ref": "EDI_PO",
+              "val": ""
+            },
+            {
+              "ref": "SPI",
+              "val": "16"
+            },
+            {
+              "ref": "PackingSlipSize",
+              "val": "L"
+            },
+            {
+              "ref": "PackingSlipDesc",
+              "val": ""
+            },
+            {
+              "ref": "HangerLoop",
+              "val": "No"
+            },
+            {
+              "ref": "HangerLoopContrast",
+              "val": "Self"
+            },
+            {
+              "ref": "HangerLoopPlacement",
+              "val": ""
+            },
+            {
+              "ref": "ColorCode",
+              "val": ""
+            },
+            {
+              "ref": "ColorName",
+              "val": ""
+            },
+            {
+              "ref": "StyleName",
+              "val": ""
+            },
+            {
+              "ref": "StoreStyle",
+              "val": ""
+            },
+            {
+              "ref": "NewAlteration",
+              "val": "No"
+            }
+          ]
+        },
+        {
+          "Product": "Shirt",
+          "Part": "",
+          "LineRefNo": "402",
+          "UnitRetailPrice": "89.00",
+          "Tier": "1A",
+          "Quantity": "4",
+          "OrderLineDetail": [
+            {
+              "ref": "RushOrder",
+              "val": "No"
+            },
+            {
+              "ref": "Style",
+              "val": "Stantt Core"
+            },
+            {
+              "ref": "PackagingMethod",
+              "val": "Patrick James"
+            },
+            {
+              "ref": "MainFabric",
+              "val": "FW01048682-0001"
+            },
+            {
+              "ref": "StanttFabric",
+              "val": "ST156"
+            },
+            {
+              "ref": "FabricName",
+              "val": "Cambridge University Stripe Oxford"
+            },
+            {
+              "ref": "Collar",
+              "val": "Button Down"
+            },
+            {
+              "ref": "Cuff",
+              "val": "Double Button Barrel"
+            },
+            {
+              "ref": "Placket",
+              "val": "Standard"
+            },
+            {
+              "ref": "CollarBandButton",
+              "val": ""
+            },
+            {
+              "ref": "CollarPiping",
+              "val": "None"
+            },
+            {
+              "ref": "Hem",
+              "val": "Curve Hem"
+            },
+            {
+              "ref": "Pocket",
+              "val": "Left Pocket"
+            },
+            {
+              "ref": "PocketType",
+              "val": "Spade"
+            },
+            {
+              "ref": "ButtonColor",
+              "val": "Natural White"
+            },
+            {
+              "ref": "CenterBackCollarButton",
+              "val": "Natural White"
+            },
+            {
+              "ref": "ContrastButtonHoleStitch",
+              "val": "Nantucket Red"
+            },
+            {
+              "ref": "ContrastButtonHoleStitchLocation",
+              "val": "Murray"
+            },
+            {
+              "ref": "ButtonThreadColor",
+              "val": "No"
+            },
+            {
+              "ref": "TopButtonThreadColor",
+              "val": "Nantucket Red"
+            },
+            {
+              "ref": "Washing",
+              "val": "No Wash"
+            },
+            {
+              "ref": "ArmHoleTaping",
+              "val": "No"
+            },
+            {
+              "ref": "Contrast",
+              "val": "Inside Collar and Button Placket"
+            },
+            {
+              "ref": "InsideContrastID",
+              "val": "FW01057723-0001"
+            },
+            {
+              "ref": "Monogram",
+              "val": "No"
+            },
+            {
+              "ref": "MonogramInitial",
+              "val": ""
+            },
+            {
+              "ref": "MonogramLocation",
+              "val": ""
+            },
+            {
+              "ref": "MonogramFont",
+              "val": ""
+            },
+            {
+              "ref": "MonogramColor",
+              "val": ""
+            },
+            {
+              "ref": "EmbroideryImage",
+              "val": "Murrays Toggery Island"
+            },
+            {
+              "ref": "EmbroideryLocation",
+              "val": "Sleeve Placket Right"
+            },
+            {
+              "ref": "EmbroideryStyle",
+              "val": ""
+            },
+            {
+              "ref": "Grosgrain",
+              "val": "No"
+            },
+            {
+              "ref": "Yoke",
+              "val": "Standard"
+            },
+            {
+              "ref": "Pleats",
+              "val": "No"
+            },
+            {
+              "ref": "Size",
+              "val": "Jackson"
+            },
+            {
+              "ref": "Tail",
+              "val": "0.0"
+            },
+            {
+              "ref": "Waist",
+              "val": "0.0"
+            },
+            {
+              "ref": "Neck",
+              "val": "0.0"
+            },
+            {
+              "ref": "Bicep",
+              "val": "0.0"
+            },
+            {
+              "ref": "LeftSleeve",
+              "val": "0.0"
+            },
+            {
+              "ref": "RightSleeve",
+              "val": "0.0"
+            },
+            {
+              "ref": "Hip",
+              "val": "0.0"
+            },
+            {
+              "ref": "AcrossShoulder",
+              "val": "0.0"
+            },
+            {
+              "ref": "Armhole",
+              "val": "0.0"
+            },
+            {
+              "ref": "LeftCuffHeight",
+              "val": "0.0"
+            },
+            {
+              "ref": "RightCuffHeight",
+              "val": "0.0"
+            },
+            {
+              "ref": "CollarRoll",
+              "val": "0.0"
+            },
+            {
+              "ref": "Chest",
+              "val": "0.0"
+            },
+            {
+              "ref": "LeftCuffCirc",
+              "val": "0.0"
+            },
+            {
+              "ref": "RightCuffCirc",
+              "val": "0.0"
+            },
+            {
+              "ref": "CollarStay",
+              "val": ""
+            },
+            {
+              "ref": "MainLabel",
+              "val": "Woven - MURRAY'S"
+            },
+            {
+              "ref": "SizeLabel",
+              "val": ""
+            },
+            {
+              "ref": "StandardLabel1",
+              "val": "M"
+            },
+            {
+              "ref": "StandardLabel2",
+              "val": "Classic"
+            },
+            {
+              "ref": "CareLabelText",
+              "val": "Cotton"
+            },
+            {
+              "ref": "HangTag1",
+              "val": ""
+            },
+            {
+              "ref": "HangTag2",
+              "val": ""
+            },
+            {
+              "ref": "UPC",
+              "val": ""
+            },
+            {
+              "ref": "UPC2",
+              "val": ""
+            },
+            {
+              "ref": "UPC3",
+              "val": ""
+            },
+            {
+              "ref": "QRURL",
+              "val": ""
+            },
+            {
+              "ref": "EDI_PO",
+              "val": ""
+            },
+            {
+              "ref": "SPI",
+              "val": "16"
+            },
+            {
+              "ref": "PackingSlipSize",
+              "val": "M"
+            },
+            {
+              "ref": "PackingSlipDesc",
+              "val": ""
+            },
+            {
+              "ref": "HangerLoop",
+              "val": "No"
+            },
+            {
+              "ref": "HangerLoopContrast",
+              "val": "Self"
+            },
+            {
+              "ref": "HangerLoopPlacement",
+              "val": ""
+            },
+            {
+              "ref": "ColorCode",
+              "val": ""
+            },
+            {
+              "ref": "ColorName",
+              "val": ""
+            },
+            {
+              "ref": "StyleName",
+              "val": ""
+            },
+            {
+              "ref": "StoreStyle",
+              "val": ""
+            },
+            {
+              "ref": "NewAlteration",
+              "val": "No"
+            }
+          ]
+        },
+        {
+          "Product": "Shirt",
+          "Part": "",
+          "LineRefNo": "403",
+          "UnitRetailPrice": "89.00",
+          "Tier": "1A",
+          "Quantity": "4",
+          "OrderLineDetail": [
+            {
+              "ref": "RushOrder",
+              "val": "No"
+            },
+            {
+              "ref": "Style",
+              "val": "Stantt Core 2"
+            },
+            {
+              "ref": "PackagingMethod",
+              "val": "Patrick James"
+            },
+            {
+              "ref": "MainFabric",
+              "val": "FW01048682-0001"
+            },
+            {
+              "ref": "StanttFabric",
+              "val": "ST156"
+            },
+            {
+              "ref": "FabricName",
+              "val": "Cambridge University Stripe Oxford"
+            },
+            {
+              "ref": "Collar",
+              "val": "Button Down"
+            },
+            {
+              "ref": "Cuff",
+              "val": "Double Button Barrel"
+            },
+            {
+              "ref": "Placket",
+              "val": "Standard"
+            },
+            {
+              "ref": "CollarBandButton",
+              "val": ""
+            },
+            {
+              "ref": "CollarPiping",
+              "val": "None"
+            },
+            {
+              "ref": "Hem",
+              "val": "Curve Hem"
+            },
+            {
+              "ref": "Pocket",
+              "val": "Left Pocket"
+            },
+            {
+              "ref": "PocketType",
+              "val": "Spade"
+            },
+            {
+              "ref": "ButtonColor",
+              "val": "Natural White"
+            },
+            {
+              "ref": "CenterBackCollarButton",
+              "val": "Natural White"
+            },
+            {
+              "ref": "ContrastButtonHoleStitch",
+              "val": "Nantucket Red"
+            },
+            {
+              "ref": "ContrastButtonHoleStitchLocation",
+              "val": "Murray"
+            },
+            {
+              "ref": "ButtonThreadColor",
+              "val": "No"
+            },
+            {
+              "ref": "TopButtonThreadColor",
+              "val": "Nantucket Red"
+            },
+            {
+              "ref": "Washing",
+              "val": "No Wash"
+            },
+            {
+              "ref": "ArmHoleTaping",
+              "val": "No"
+            },
+            {
+              "ref": "Contrast",
+              "val": "Inside Collar and Button Placket"
+            },
+            {
+              "ref": "InsideContrastID",
+              "val": "FW01057723-0001"
+            },
+            {
+              "ref": "Monogram",
+              "val": "No"
+            },
+            {
+              "ref": "MonogramInitial",
+              "val": ""
+            },
+            {
+              "ref": "MonogramLocation",
+              "val": ""
+            },
+            {
+              "ref": "MonogramFont",
+              "val": ""
+            },
+            {
+              "ref": "MonogramColor",
+              "val": ""
+            },
+            {
+              "ref": "EmbroideryImage",
+              "val": "Murrays Toggery Island"
+            },
+            {
+              "ref": "EmbroideryLocation",
+              "val": "Sleeve Placket Right"
+            },
+            {
+              "ref": "EmbroideryStyle",
+              "val": ""
+            },
+            {
+              "ref": "Grosgrain",
+              "val": "No"
+            },
+            {
+              "ref": "Yoke",
+              "val": "Standard"
+            },
+            {
+              "ref": "Pleats",
+              "val": "No"
+            },
+            {
+              "ref": "Size",
+              "val": "Grand"
+            },
+            {
+              "ref": "Tail",
+              "val": "0.0"
+            },
+            {
+              "ref": "Waist",
+              "val": "0.0"
+            },
+            {
+              "ref": "Neck",
+              "val": "0.0"
+            },
+            {
+              "ref": "Bicep",
+              "val": "0.0"
+            },
+            {
+              "ref": "LeftSleeve",
+              "val": "0.0"
+            },
+            {
+              "ref": "RightSleeve",
+              "val": "0.0"
+            },
+            {
+              "ref": "Hip",
+              "val": "0.0"
+            },
+            {
+              "ref": "AcrossShoulder",
+              "val": "0.0"
+            },
+            {
+              "ref": "Armhole",
+              "val": "0.0"
+            },
+            {
+              "ref": "LeftCuffHeight",
+              "val": "0.0"
+            },
+            {
+              "ref": "RightCuffHeight",
+              "val": "0.0"
+            },
+            {
+              "ref": "CollarRoll",
+              "val": "0.0"
+            },
+            {
+              "ref": "Chest",
+              "val": "0.0"
+            },
+            {
+              "ref": "LeftCuffCirc",
+              "val": "0.0"
+            },
+            {
+              "ref": "RightCuffCirc",
+              "val": "0.0"
+            },
+            {
+              "ref": "CollarStay",
+              "val": ""
+            },
+            {
+              "ref": "MainLabel",
+              "val": "Woven - MURRAY'S"
+            },
+            {
+              "ref": "SizeLabel",
+              "val": ""
+            },
+            {
+              "ref": "StandardLabel1",
+              "val": "XL"
+            },
+            {
+              "ref": "StandardLabel2",
+              "val": "Classic"
+            },
+            {
+              "ref": "CareLabelText",
+              "val": "Cotton"
+            },
+            {
+              "ref": "HangTag1",
+              "val": ""
+            },
+            {
+              "ref": "HangTag2",
+              "val": ""
+            },
+            {
+              "ref": "UPC",
+              "val": ""
+            },
+            {
+              "ref": "UPC2",
+              "val": ""
+            },
+            {
+              "ref": "UPC3",
+              "val": ""
+            },
+            {
+              "ref": "QRURL",
+              "val": ""
+            },
+            {
+              "ref": "EDI_PO",
+              "val": ""
+            },
+            {
+              "ref": "SPI",
+              "val": "16"
+            },
+            {
+              "ref": "PackingSlipSize",
+              "val": "XL"
+            },
+            {
+              "ref": "PackingSlipDesc",
+              "val": ""
+            },
+            {
+              "ref": "HangerLoop",
+              "val": "No"
+            },
+            {
+              "ref": "HangerLoopContrast",
+              "val": "Self"
+            },
+            {
+              "ref": "HangerLoopPlacement",
+              "val": ""
+            },
+            {
+              "ref": "ColorCode",
+              "val": ""
+            },
+            {
+              "ref": "ColorName",
+              "val": ""
+            },
+            {
+              "ref": "StyleName",
+              "val": ""
+            },
+            {
+              "ref": "StoreStyle",
+              "val": ""
+            },
+            {
+              "ref": "NewAlteration",
+              "val": "No"
+            }
+          ]
+        },
+        {
+          "Product": "Shirt",
+          "Part": "",
+          "LineRefNo": "404",
+          "UnitRetailPrice": "89.00",
+          "Tier": "1A",
+          "Quantity": "2",
+          "OrderLineDetail": [
+            {
+              "ref": "RushOrder",
+              "val": "No"
+            },
+            {
+              "ref": "Style",
+              "val": "Stantt Core 2"
+            },
+            {
+              "ref": "PackagingMethod",
+              "val": "Patrick James"
+            },
+            {
+              "ref": "MainFabric",
+              "val": "FW01048682-0001"
+            },
+            {
+              "ref": "StanttFabric",
+              "val": "ST156"
+            },
+            {
+              "ref": "FabricName",
+              "val": "Cambridge University Stripe Oxford"
+            },
+            {
+              "ref": "Collar",
+              "val": "Button Down"
+            },
+            {
+              "ref": "Cuff",
+              "val": "Double Button Barrel"
+            },
+            {
+              "ref": "Placket",
+              "val": "Standard"
+            },
+            {
+              "ref": "CollarBandButton",
+              "val": ""
+            },
+            {
+              "ref": "CollarPiping",
+              "val": "None"
+            },
+            {
+              "ref": "Hem",
+              "val": "Curve Hem"
+            },
+            {
+              "ref": "Pocket",
+              "val": "Left Pocket"
+            },
+            {
+              "ref": "PocketType",
+              "val": "Spade"
+            },
+            {
+              "ref": "ButtonColor",
+              "val": "Natural White"
+            },
+            {
+              "ref": "CenterBackCollarButton",
+              "val": "Natural White"
+            },
+            {
+              "ref": "ContrastButtonHoleStitch",
+              "val": "Nantucket Red"
+            },
+            {
+              "ref": "ContrastButtonHoleStitchLocation",
+              "val": "Murray"
+            },
+            {
+              "ref": "ButtonThreadColor",
+              "val": "No"
+            },
+            {
+              "ref": "TopButtonThreadColor",
+              "val": "Nantucket Red"
+            },
+            {
+              "ref": "Washing",
+              "val": "No Wash"
+            },
+            {
+              "ref": "ArmHoleTaping",
+              "val": "No"
+            },
+            {
+              "ref": "Contrast",
+              "val": "Inside Collar and Button Placket"
+            },
+            {
+              "ref": "InsideContrastID",
+              "val": "FW01057723-0001"
+            },
+            {
+              "ref": "Monogram",
+              "val": "No"
+            },
+            {
+              "ref": "MonogramInitial",
+              "val": ""
+            },
+            {
+              "ref": "MonogramLocation",
+              "val": ""
+            },
+            {
+              "ref": "MonogramFont",
+              "val": ""
+            },
+            {
+              "ref": "MonogramColor",
+              "val": ""
+            },
+            {
+              "ref": "EmbroideryImage",
+              "val": "Murrays Toggery Island"
+            },
+            {
+              "ref": "EmbroideryLocation",
+              "val": "Sleeve Placket Right"
+            },
+            {
+              "ref": "EmbroideryStyle",
+              "val": ""
+            },
+            {
+              "ref": "Grosgrain",
+              "val": "No"
+            },
+            {
+              "ref": "Yoke",
+              "val": "Standard"
+            },
+            {
+              "ref": "Pleats",
+              "val": "No"
+            },
+            {
+              "ref": "Size",
+              "val": "Thames"
+            },
+            {
+              "ref": "Tail",
+              "val": "0.0"
+            },
+            {
+              "ref": "Waist",
+              "val": "0.0"
+            },
+            {
+              "ref": "Neck",
+              "val": "0.0"
+            },
+            {
+              "ref": "Bicep",
+              "val": "0.0"
+            },
+            {
+              "ref": "LeftSleeve",
+              "val": "0.0"
+            },
+            {
+              "ref": "RightSleeve",
+              "val": "0.0"
+            },
+            {
+              "ref": "Hip",
+              "val": "0.0"
+            },
+            {
+              "ref": "AcrossShoulder",
+              "val": "0.0"
+            },
+            {
+              "ref": "Armhole",
+              "val": "0.0"
+            },
+            {
+              "ref": "LeftCuffHeight",
+              "val": "0.0"
+            },
+            {
+              "ref": "RightCuffHeight",
+              "val": "0.0"
+            },
+            {
+              "ref": "CollarRoll",
+              "val": "0.0"
+            },
+            {
+              "ref": "Chest",
+              "val": "0.0"
+            },
+            {
+              "ref": "LeftCuffCirc",
+              "val": "0.0"
+            },
+            {
+              "ref": "RightCuffCirc",
+              "val": "0.0"
+            },
+            {
+              "ref": "CollarStay",
+              "val": ""
+            },
+            {
+              "ref": "MainLabel",
+              "val": "Woven - MURRAY'S"
+            },
+            {
+              "ref": "SizeLabel",
+              "val": ""
+            },
+            {
+              "ref": "StandardLabel1",
+              "val": "2XL"
+            },
+            {
+              "ref": "StandardLabel2",
+              "val": "Classic"
+            },
+            {
+              "ref": "CareLabelText",
+              "val": "Cotton"
+            },
+            {
+              "ref": "HangTag1",
+              "val": ""
+            },
+            {
+              "ref": "HangTag2",
+              "val": ""
+            },
+            {
+              "ref": "UPC",
+              "val": ""
+            },
+            {
+              "ref": "UPC2",
+              "val": ""
+            },
+            {
+              "ref": "UPC3",
+              "val": ""
+            },
+            {
+              "ref": "QRURL",
+              "val": ""
+            },
+            {
+              "ref": "EDI_PO",
+              "val": ""
+            },
+            {
+              "ref": "SPI",
+              "val": "16"
+            },
+            {
+              "ref": "PackingSlipSize",
+              "val": "2XL"
+            },
+            {
+              "ref": "PackingSlipDesc",
+              "val": ""
+            },
+            {
+              "ref": "HangerLoop",
+              "val": "No"
+            },
+            {
+              "ref": "HangerLoopContrast",
+              "val": "Self"
+            },
+            {
+              "ref": "HangerLoopPlacement",
+              "val": ""
+            },
+            {
+              "ref": "ColorCode",
+              "val": ""
+            },
+            {
+              "ref": "ColorName",
+              "val": ""
+            },
+            {
+              "ref": "StyleName",
+              "val": ""
+            },
+            {
+              "ref": "StoreStyle",
+              "val": ""
+            },
+            {
+              "ref": "NewAlteration",
+              "val": "No"
+            }
+          ]
+        },
+        {
+          "Product": "Shirt",
+          "Part": "",
+          "LineRefNo": "501",
+          "UnitRetailPrice": "89.00",
+          "Tier": "1A",
+          "Quantity": "3",
+          "OrderLineDetail": [
+            {
+              "ref": "RushOrder",
+              "val": "No"
+            },
+            {
+              "ref": "Style",
+              "val": "Stantt Core"
+            },
+            {
+              "ref": "PackagingMethod",
+              "val": "Patrick James"
+            },
+            {
+              "ref": "MainFabric",
+              "val": "FW01048681-0003"
+            },
+            {
+              "ref": "StanttFabric",
+              "val": "ST153"
+            },
+            {
+              "ref": "FabricName",
+              "val": "Cambridge Blue Oxford"
+            },
+            {
+              "ref": "Collar",
+              "val": "Button Down"
+            },
+            {
+              "ref": "Cuff",
+              "val": "Double Button Barrel"
+            },
+            {
+              "ref": "Placket",
+              "val": "Standard"
+            },
+            {
+              "ref": "CollarBandButton",
+              "val": ""
+            },
+            {
+              "ref": "CollarPiping",
+              "val": "None"
+            },
+            {
+              "ref": "Hem",
+              "val": "Curve Hem"
+            },
+            {
+              "ref": "Pocket",
+              "val": "Left Pocket"
+            },
+            {
+              "ref": "PocketType",
+              "val": "Spade"
+            },
+            {
+              "ref": "ButtonColor",
+              "val": "Natural White"
+            },
+            {
+              "ref": "CenterBackCollarButton",
+              "val": "Natural White"
+            },
+            {
+              "ref": "ContrastButtonHoleStitch",
+              "val": "Nantucket Red"
+            },
+            {
+              "ref": "ContrastButtonHoleStitchLocation",
+              "val": "Murray"
+            },
+            {
+              "ref": "ButtonThreadColor",
+              "val": "No"
+            },
+            {
+              "ref": "TopButtonThreadColor",
+              "val": "Nantucket Red"
+            },
+            {
+              "ref": "Washing",
+              "val": "No Wash"
+            },
+            {
+              "ref": "ArmHoleTaping",
+              "val": "No"
+            },
+            {
+              "ref": "Contrast",
+              "val": "Inside Collar and Button Placket"
+            },
+            {
+              "ref": "InsideContrastID",
+              "val": "FW01057723-0001"
+            },
+            {
+              "ref": "Monogram",
+              "val": "No"
+            },
+            {
+              "ref": "MonogramInitial",
+              "val": ""
+            },
+            {
+              "ref": "MonogramLocation",
+              "val": ""
+            },
+            {
+              "ref": "MonogramFont",
+              "val": ""
+            },
+            {
+              "ref": "MonogramColor",
+              "val": ""
+            },
+            {
+              "ref": "EmbroideryImage",
+              "val": "Murrays Toggery Island"
+            },
+            {
+              "ref": "EmbroideryLocation",
+              "val": "Sleeve Placket Right"
+            },
+            {
+              "ref": "EmbroideryStyle",
+              "val": ""
+            },
+            {
+              "ref": "Grosgrain",
+              "val": "No"
+            },
+            {
+              "ref": "Yoke",
+              "val": "Standard"
+            },
+            {
+              "ref": "Pleats",
+              "val": "No"
+            },
+            {
+              "ref": "Size",
+              "val": "Morris"
+            },
+            {
+              "ref": "Tail",
+              "val": "0.0"
+            },
+            {
+              "ref": "Waist",
+              "val": "0.0"
+            },
+            {
+              "ref": "Neck",
+              "val": "0.0"
+            },
+            {
+              "ref": "Bicep",
+              "val": "0.0"
+            },
+            {
+              "ref": "LeftSleeve",
+              "val": "0.0"
+            },
+            {
+              "ref": "RightSleeve",
+              "val": "0.0"
+            },
+            {
+              "ref": "Hip",
+              "val": "0.0"
+            },
+            {
+              "ref": "AcrossShoulder",
+              "val": "0.0"
+            },
+            {
+              "ref": "Armhole",
+              "val": "0.0"
+            },
+            {
+              "ref": "LeftCuffHeight",
+              "val": "0.0"
+            },
+            {
+              "ref": "RightCuffHeight",
+              "val": "0.0"
+            },
+            {
+              "ref": "CollarRoll",
+              "val": "0.0"
+            },
+            {
+              "ref": "Chest",
+              "val": "0.0"
+            },
+            {
+              "ref": "LeftCuffCirc",
+              "val": "0.0"
+            },
+            {
+              "ref": "RightCuffCirc",
+              "val": "0.0"
+            },
+            {
+              "ref": "CollarStay",
+              "val": ""
+            },
+            {
+              "ref": "MainLabel",
+              "val": "Woven - MURRAY'S"
+            },
+            {
+              "ref": "SizeLabel",
+              "val": ""
+            },
+            {
+              "ref": "StandardLabel1",
+              "val": "L"
+            },
+            {
+              "ref": "StandardLabel2",
+              "val": "Classic"
+            },
+            {
+              "ref": "CareLabelText",
+              "val": "Cotton"
+            },
+            {
+              "ref": "HangTag1",
+              "val": ""
+            },
+            {
+              "ref": "HangTag2",
+              "val": ""
+            },
+            {
+              "ref": "UPC",
+              "val": ""
+            },
+            {
+              "ref": "UPC2",
+              "val": ""
+            },
+            {
+              "ref": "UPC3",
+              "val": ""
+            },
+            {
+              "ref": "QRURL",
+              "val": ""
+            },
+            {
+              "ref": "EDI_PO",
+              "val": ""
+            },
+            {
+              "ref": "SPI",
+              "val": "16"
+            },
+            {
+              "ref": "PackingSlipSize",
+              "val": "L"
+            },
+            {
+              "ref": "PackingSlipDesc",
+              "val": ""
+            },
+            {
+              "ref": "HangerLoop",
+              "val": "No"
+            },
+            {
+              "ref": "HangerLoopContrast",
+              "val": "Self"
+            },
+            {
+              "ref": "HangerLoopPlacement",
+              "val": ""
+            },
+            {
+              "ref": "ColorCode",
+              "val": ""
+            },
+            {
+              "ref": "ColorName",
+              "val": ""
+            },
+            {
+              "ref": "StyleName",
+              "val": ""
+            },
+            {
+              "ref": "StoreStyle",
+              "val": ""
+            },
+            {
+              "ref": "NewAlteration",
+              "val": "No"
+            }
+          ]
+        },
+        {
+          "Product": "Shirt",
+          "Part": "",
+          "LineRefNo": "502",
+          "UnitRetailPrice": "89.00",
+          "Tier": "1A",
+          "Quantity": "3",
+          "OrderLineDetail": [
+            {
+              "ref": "RushOrder",
+              "val": "No"
+            },
+            {
+              "ref": "Style",
+              "val": "Stantt Core"
+            },
+            {
+              "ref": "PackagingMethod",
+              "val": "Patrick James"
+            },
+            {
+              "ref": "MainFabric",
+              "val": "FW01048681-0003"
+            },
+            {
+              "ref": "StanttFabric",
+              "val": "ST153"
+            },
+            {
+              "ref": "FabricName",
+              "val": "Cambridge Blue Oxford"
+            },
+            {
+              "ref": "Collar",
+              "val": "Button Down"
+            },
+            {
+              "ref": "Cuff",
+              "val": "Double Button Barrel"
+            },
+            {
+              "ref": "Placket",
+              "val": "Standard"
+            },
+            {
+              "ref": "CollarBandButton",
+              "val": ""
+            },
+            {
+              "ref": "CollarPiping",
+              "val": "None"
+            },
+            {
+              "ref": "Hem",
+              "val": "Curve Hem"
+            },
+            {
+              "ref": "Pocket",
+              "val": "Left Pocket"
+            },
+            {
+              "ref": "PocketType",
+              "val": "Spade"
+            },
+            {
+              "ref": "ButtonColor",
+              "val": "Natural White"
+            },
+            {
+              "ref": "CenterBackCollarButton",
+              "val": "Natural White"
+            },
+            {
+              "ref": "ContrastButtonHoleStitch",
+              "val": "Nantucket Red"
+            },
+            {
+              "ref": "ContrastButtonHoleStitchLocation",
+              "val": "Murray"
+            },
+            {
+              "ref": "ButtonThreadColor",
+              "val": "No"
+            },
+            {
+              "ref": "TopButtonThreadColor",
+              "val": "Nantucket Red"
+            },
+            {
+              "ref": "Washing",
+              "val": "No Wash"
+            },
+            {
+              "ref": "ArmHoleTaping",
+              "val": "No"
+            },
+            {
+              "ref": "Contrast",
+              "val": "Inside Collar and Button Placket"
+            },
+            {
+              "ref": "InsideContrastID",
+              "val": "FW01057723-0001"
+            },
+            {
+              "ref": "Monogram",
+              "val": "No"
+            },
+            {
+              "ref": "MonogramInitial",
+              "val": ""
+            },
+            {
+              "ref": "MonogramLocation",
+              "val": ""
+            },
+            {
+              "ref": "MonogramFont",
+              "val": ""
+            },
+            {
+              "ref": "MonogramColor",
+              "val": ""
+            },
+            {
+              "ref": "EmbroideryImage",
+              "val": "Murrays Toggery Island"
+            },
+            {
+              "ref": "EmbroideryLocation",
+              "val": "Sleeve Placket Right"
+            },
+            {
+              "ref": "EmbroideryStyle",
+              "val": ""
+            },
+            {
+              "ref": "Grosgrain",
+              "val": "No"
+            },
+            {
+              "ref": "Yoke",
+              "val": "Standard"
+            },
+            {
+              "ref": "Pleats",
+              "val": "No"
+            },
+            {
+              "ref": "Size",
+              "val": "Jackson"
+            },
+            {
+              "ref": "Tail",
+              "val": "0.0"
+            },
+            {
+              "ref": "Waist",
+              "val": "0.0"
+            },
+            {
+              "ref": "Neck",
+              "val": "0.0"
+            },
+            {
+              "ref": "Bicep",
+              "val": "0.0"
+            },
+            {
+              "ref": "LeftSleeve",
+              "val": "0.0"
+            },
+            {
+              "ref": "RightSleeve",
+              "val": "0.0"
+            },
+            {
+              "ref": "Hip",
+              "val": "0.0"
+            },
+            {
+              "ref": "AcrossShoulder",
+              "val": "0.0"
+            },
+            {
+              "ref": "Armhole",
+              "val": "0.0"
+            },
+            {
+              "ref": "LeftCuffHeight",
+              "val": "0.0"
+            },
+            {
+              "ref": "RightCuffHeight",
+              "val": "0.0"
+            },
+            {
+              "ref": "CollarRoll",
+              "val": "0.0"
+            },
+            {
+              "ref": "Chest",
+              "val": "0.0"
+            },
+            {
+              "ref": "LeftCuffCirc",
+              "val": "0.0"
+            },
+            {
+              "ref": "RightCuffCirc",
+              "val": "0.0"
+            },
+            {
+              "ref": "CollarStay",
+              "val": ""
+            },
+            {
+              "ref": "MainLabel",
+              "val": "Woven - MURRAY'S"
+            },
+            {
+              "ref": "SizeLabel",
+              "val": ""
+            },
+            {
+              "ref": "StandardLabel1",
+              "val": "M"
+            },
+            {
+              "ref": "StandardLabel2",
+              "val": "Classic"
+            },
+            {
+              "ref": "CareLabelText",
+              "val": "Cotton"
+            },
+            {
+              "ref": "HangTag1",
+              "val": ""
+            },
+            {
+              "ref": "HangTag2",
+              "val": ""
+            },
+            {
+              "ref": "UPC",
+              "val": ""
+            },
+            {
+              "ref": "UPC2",
+              "val": ""
+            },
+            {
+              "ref": "UPC3",
+              "val": ""
+            },
+            {
+              "ref": "QRURL",
+              "val": ""
+            },
+            {
+              "ref": "EDI_PO",
+              "val": ""
+            },
+            {
+              "ref": "SPI",
+              "val": "16"
+            },
+            {
+              "ref": "PackingSlipSize",
+              "val": "M"
+            },
+            {
+              "ref": "PackingSlipDesc",
+              "val": ""
+            },
+            {
+              "ref": "HangerLoop",
+              "val": "No"
+            },
+            {
+              "ref": "HangerLoopContrast",
+              "val": "Self"
+            },
+            {
+              "ref": "HangerLoopPlacement",
+              "val": ""
+            },
+            {
+              "ref": "ColorCode",
+              "val": ""
+            },
+            {
+              "ref": "ColorName",
+              "val": ""
+            },
+            {
+              "ref": "StyleName",
+              "val": ""
+            },
+            {
+              "ref": "StoreStyle",
+              "val": ""
+            },
+            {
+              "ref": "NewAlteration",
+              "val": "No"
+            }
+          ]
+        },
+        {
+          "Product": "Shirt",
+          "Part": "",
+          "LineRefNo": "503",
+          "UnitRetailPrice": "89.00",
+          "Tier": "1A",
+          "Quantity": "2",
+          "OrderLineDetail": [
+            {
+              "ref": "RushOrder",
+              "val": "No"
+            },
+            {
+              "ref": "Style",
+              "val": "Stantt Core 2"
+            },
+            {
+              "ref": "PackagingMethod",
+              "val": "Patrick James"
+            },
+            {
+              "ref": "MainFabric",
+              "val": "FW01048681-0003"
+            },
+            {
+              "ref": "StanttFabric",
+              "val": "ST153"
+            },
+            {
+              "ref": "FabricName",
+              "val": "Cambridge Blue Oxford"
+            },
+            {
+              "ref": "Collar",
+              "val": "Button Down"
+            },
+            {
+              "ref": "Cuff",
+              "val": "Double Button Barrel"
+            },
+            {
+              "ref": "Placket",
+              "val": "Standard"
+            },
+            {
+              "ref": "CollarBandButton",
+              "val": ""
+            },
+            {
+              "ref": "CollarPiping",
+              "val": "None"
+            },
+            {
+              "ref": "Hem",
+              "val": "Curve Hem"
+            },
+            {
+              "ref": "Pocket",
+              "val": "Left Pocket"
+            },
+            {
+              "ref": "PocketType",
+              "val": "Spade"
+            },
+            {
+              "ref": "ButtonColor",
+              "val": "Natural White"
+            },
+            {
+              "ref": "CenterBackCollarButton",
+              "val": "Natural White"
+            },
+            {
+              "ref": "ContrastButtonHoleStitch",
+              "val": "Nantucket Red"
+            },
+            {
+              "ref": "ContrastButtonHoleStitchLocation",
+              "val": "Murray"
+            },
+            {
+              "ref": "ButtonThreadColor",
+              "val": "No"
+            },
+            {
+              "ref": "TopButtonThreadColor",
+              "val": "Nantucket Red"
+            },
+            {
+              "ref": "Washing",
+              "val": "No Wash"
+            },
+            {
+              "ref": "ArmHoleTaping",
+              "val": "No"
+            },
+            {
+              "ref": "Contrast",
+              "val": "Inside Collar and Button Placket"
+            },
+            {
+              "ref": "InsideContrastID",
+              "val": "FW01057723-0001"
+            },
+            {
+              "ref": "Monogram",
+              "val": "No"
+            },
+            {
+              "ref": "MonogramInitial",
+              "val": ""
+            },
+            {
+              "ref": "MonogramLocation",
+              "val": ""
+            },
+            {
+              "ref": "MonogramFont",
+              "val": ""
+            },
+            {
+              "ref": "MonogramColor",
+              "val": ""
+            },
+            {
+              "ref": "EmbroideryImage",
+              "val": "Murrays Toggery Island"
+            },
+            {
+              "ref": "EmbroideryLocation",
+              "val": "Sleeve Placket Right"
+            },
+            {
+              "ref": "EmbroideryStyle",
+              "val": ""
+            },
+            {
+              "ref": "Grosgrain",
+              "val": "No"
+            },
+            {
+              "ref": "Yoke",
+              "val": "Standard"
+            },
+            {
+              "ref": "Pleats",
+              "val": "No"
+            },
+            {
+              "ref": "Size",
+              "val": "Grand"
+            },
+            {
+              "ref": "Tail",
+              "val": "0.0"
+            },
+            {
+              "ref": "Waist",
+              "val": "0.0"
+            },
+            {
+              "ref": "Neck",
+              "val": "0.0"
+            },
+            {
+              "ref": "Bicep",
+              "val": "0.0"
+            },
+            {
+              "ref": "LeftSleeve",
+              "val": "0.0"
+            },
+            {
+              "ref": "RightSleeve",
+              "val": "0.0"
+            },
+            {
+              "ref": "Hip",
+              "val": "0.0"
+            },
+            {
+              "ref": "AcrossShoulder",
+              "val": "0.0"
+            },
+            {
+              "ref": "Armhole",
+              "val": "0.0"
+            },
+            {
+              "ref": "LeftCuffHeight",
+              "val": "0.0"
+            },
+            {
+              "ref": "RightCuffHeight",
+              "val": "0.0"
+            },
+            {
+              "ref": "CollarRoll",
+              "val": "0.0"
+            },
+            {
+              "ref": "Chest",
+              "val": "0.0"
+            },
+            {
+              "ref": "LeftCuffCirc",
+              "val": "0.0"
+            },
+            {
+              "ref": "RightCuffCirc",
+              "val": "0.0"
+            },
+            {
+              "ref": "CollarStay",
+              "val": ""
+            },
+            {
+              "ref": "MainLabel",
+              "val": "Woven - MURRAY'S"
+            },
+            {
+              "ref": "SizeLabel",
+              "val": ""
+            },
+            {
+              "ref": "StandardLabel1",
+              "val": "XL"
+            },
+            {
+              "ref": "StandardLabel2",
+              "val": "Classic"
+            },
+            {
+              "ref": "CareLabelText",
+              "val": "Cotton"
+            },
+            {
+              "ref": "HangTag1",
+              "val": ""
+            },
+            {
+              "ref": "HangTag2",
+              "val": ""
+            },
+            {
+              "ref": "UPC",
+              "val": ""
+            },
+            {
+              "ref": "UPC2",
+              "val": ""
+            },
+            {
+              "ref": "UPC3",
+              "val": ""
+            },
+            {
+              "ref": "QRURL",
+              "val": ""
+            },
+            {
+              "ref": "EDI_PO",
+              "val": ""
+            },
+            {
+              "ref": "SPI",
+              "val": "16"
+            },
+            {
+              "ref": "PackingSlipSize",
+              "val": "XL"
+            },
+            {
+              "ref": "PackingSlipDesc",
+              "val": ""
+            },
+            {
+              "ref": "HangerLoop",
+              "val": "No"
+            },
+            {
+              "ref": "HangerLoopContrast",
+              "val": "Self"
+            },
+            {
+              "ref": "HangerLoopPlacement",
+              "val": ""
+            },
+            {
+              "ref": "ColorCode",
+              "val": ""
+            },
+            {
+              "ref": "ColorName",
+              "val": ""
+            },
+            {
+              "ref": "StyleName",
+              "val": ""
+            },
+            {
+              "ref": "StoreStyle",
+              "val": ""
+            },
+            {
+              "ref": "NewAlteration",
+              "val": "No"
+            }
+          ]
+        },
+        {
+          "Product": "Shirt",
+          "Part": "",
+          "LineRefNo": "504",
+          "UnitRetailPrice": "89.00",
+          "Tier": "1A",
+          "Quantity": "1",
+          "OrderLineDetail": [
+            {
+              "ref": "RushOrder",
+              "val": "No"
+            },
+            {
+              "ref": "Style",
+              "val": "Stantt Core 2"
+            },
+            {
+              "ref": "PackagingMethod",
+              "val": "Patrick James"
+            },
+            {
+              "ref": "MainFabric",
+              "val": "FW01048681-0003"
+            },
+            {
+              "ref": "StanttFabric",
+              "val": "ST153"
+            },
+            {
+              "ref": "FabricName",
+              "val": "Cambridge Blue Oxford"
+            },
+            {
+              "ref": "Collar",
+              "val": "Button Down"
+            },
+            {
+              "ref": "Cuff",
+              "val": "Double Button Barrel"
+            },
+            {
+              "ref": "Placket",
+              "val": "Standard"
+            },
+            {
+              "ref": "CollarBandButton",
+              "val": ""
+            },
+            {
+              "ref": "CollarPiping",
+              "val": "None"
+            },
+            {
+              "ref": "Hem",
+              "val": "Curve Hem"
+            },
+            {
+              "ref": "Pocket",
+              "val": "Left Pocket"
+            },
+            {
+              "ref": "PocketType",
+              "val": "Spade"
+            },
+            {
+              "ref": "ButtonColor",
+              "val": "Natural White"
+            },
+            {
+              "ref": "CenterBackCollarButton",
+              "val": "Natural White"
+            },
+            {
+              "ref": "ContrastButtonHoleStitch",
+              "val": "Nantucket Red"
+            },
+            {
+              "ref": "ContrastButtonHoleStitchLocation",
+              "val": "Murray"
+            },
+            {
+              "ref": "ButtonThreadColor",
+              "val": "No"
+            },
+            {
+              "ref": "TopButtonThreadColor",
+              "val": "Nantucket Red"
+            },
+            {
+              "ref": "Washing",
+              "val": "No Wash"
+            },
+            {
+              "ref": "ArmHoleTaping",
+              "val": "No"
+            },
+            {
+              "ref": "Contrast",
+              "val": "Inside Collar and Button Placket"
+            },
+            {
+              "ref": "InsideContrastID",
+              "val": "FW01057723-0001"
+            },
+            {
+              "ref": "Monogram",
+              "val": "No"
+            },
+            {
+              "ref": "MonogramInitial",
+              "val": ""
+            },
+            {
+              "ref": "MonogramLocation",
+              "val": ""
+            },
+            {
+              "ref": "MonogramFont",
+              "val": ""
+            },
+            {
+              "ref": "MonogramColor",
+              "val": ""
+            },
+            {
+              "ref": "EmbroideryImage",
+              "val": "Murrays Toggery Island"
+            },
+            {
+              "ref": "EmbroideryLocation",
+              "val": "Sleeve Placket Right"
+            },
+            {
+              "ref": "EmbroideryStyle",
+              "val": ""
+            },
+            {
+              "ref": "Grosgrain",
+              "val": "No"
+            },
+            {
+              "ref": "Yoke",
+              "val": "Standard"
+            },
+            {
+              "ref": "Pleats",
+              "val": "No"
+            },
+            {
+              "ref": "Size",
+              "val": "Thames"
+            },
+            {
+              "ref": "Tail",
+              "val": "0.0"
+            },
+            {
+              "ref": "Waist",
+              "val": "0.0"
+            },
+            {
+              "ref": "Neck",
+              "val": "0.0"
+            },
+            {
+              "ref": "Bicep",
+              "val": "0.0"
+            },
+            {
+              "ref": "LeftSleeve",
+              "val": "0.0"
+            },
+            {
+              "ref": "RightSleeve",
+              "val": "0.0"
+            },
+            {
+              "ref": "Hip",
+              "val": "0.0"
+            },
+            {
+              "ref": "AcrossShoulder",
+              "val": "0.0"
+            },
+            {
+              "ref": "Armhole",
+              "val": "0.0"
+            },
+            {
+              "ref": "LeftCuffHeight",
+              "val": "0.0"
+            },
+            {
+              "ref": "RightCuffHeight",
+              "val": "0.0"
+            },
+            {
+              "ref": "CollarRoll",
+              "val": "0.0"
+            },
+            {
+              "ref": "Chest",
+              "val": "0.0"
+            },
+            {
+              "ref": "LeftCuffCirc",
+              "val": "0.0"
+            },
+            {
+              "ref": "RightCuffCirc",
+              "val": "0.0"
+            },
+            {
+              "ref": "CollarStay",
+              "val": ""
+            },
+            {
+              "ref": "MainLabel",
+              "val": "Woven - MURRAY'S"
+            },
+            {
+              "ref": "SizeLabel",
+              "val": ""
+            },
+            {
+              "ref": "StandardLabel1",
+              "val": "2XL"
+            },
+            {
+              "ref": "StandardLabel2",
+              "val": "Classic"
+            },
+            {
+              "ref": "CareLabelText",
+              "val": "Cotton"
+            },
+            {
+              "ref": "HangTag1",
+              "val": ""
+            },
+            {
+              "ref": "HangTag2",
+              "val": ""
+            },
+            {
+              "ref": "UPC",
+              "val": ""
+            },
+            {
+              "ref": "UPC2",
+              "val": ""
+            },
+            {
+              "ref": "UPC3",
+              "val": ""
+            },
+            {
+              "ref": "QRURL",
+              "val": ""
+            },
+            {
+              "ref": "EDI_PO",
+              "val": ""
+            },
+            {
+              "ref": "SPI",
+              "val": "16"
+            },
+            {
+              "ref": "PackingSlipSize",
+              "val": "2XL"
+            },
+            {
+              "ref": "PackingSlipDesc",
+              "val": ""
+            },
+            {
+              "ref": "HangerLoop",
+              "val": "No"
+            },
+            {
+              "ref": "HangerLoopContrast",
+              "val": "Self"
+            },
+            {
+              "ref": "HangerLoopPlacement",
+              "val": ""
+            },
+            {
+              "ref": "ColorCode",
+              "val": ""
+            },
+            {
+              "ref": "ColorName",
+              "val": ""
+            },
+            {
+              "ref": "StyleName",
+              "val": ""
+            },
+            {
+              "ref": "StoreStyle",
+              "val": ""
+            },
+            {
+              "ref": "NewAlteration",
+              "val": "No"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
