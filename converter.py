@@ -52,7 +52,14 @@ def json_to_excel(json_bytes: bytes) -> bytes:
     ws.title = "Orders"
 
     if rows:
-        columns = list(rows[0].keys())
+        # Collect ALL columns across all rows to avoid missing fields
+        # that only appear in some orders (e.g. JokerTag, LInseam short, etc.)
+        seen = {}
+        for row in rows:
+            for k in row.keys():
+                if k not in seen:
+                    seen[k] = True
+        columns = list(seen.keys())
         # Write header row
         header_fill = PatternFill("solid", fgColor="4472C4")
         header_font = Font(bold=True, color="FFFFFF")
