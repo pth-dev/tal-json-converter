@@ -7,7 +7,7 @@ from openpyxl.styles import Font, PatternFill, Alignment
 HEADER_COLS = [
     "OrderNumber", "ReferenceNo", "RSVS", "OrderDate", "OrderType",
     "ShipmentMethod", "PackagingMethod", "CustomerName",
-    "ShiptoCustomerName", "CustomerAddress1", "CustomerAddress2",
+    "ShiptoCustomerName", "CustomerAddress1", "CustomerAddress2", "CustomerAddress3",
     "CustomerAddressCity", "CustomerAddressState", "CustomerAddressZip",
     "CustomerAddressCountry", "CustomerPhoneNumber", "SalesPerson",
 ]
@@ -102,7 +102,7 @@ def excel_to_json(excel_bytes: bytes) -> bytes:
         header_detail = [
             {"ref": col, "val": first[col]}
             for col in HEADER_DETAIL_COLS
-            if col in df.columns and first[col] != ""
+            if col in df.columns
         ]
 
         order_lines = []
@@ -111,7 +111,6 @@ def excel_to_json(excel_bytes: bytes) -> bytes:
             line_detail = [
                 {"ref": col, "val": row[col]}
                 for col in line_detail_cols
-                if row[col] != ""
             ]
             order_line = {**line_fields, "OrderLineDetail": line_detail}
             order_lines.append(order_line)
