@@ -1,9 +1,3 @@
-"""
-excel_to_xml_jhil.py
-====================
-Convert Excel file (exported from JHILBurn KnitPO) back to official XML format.
-"""
-
 import re
 import io
 import openpyxl
